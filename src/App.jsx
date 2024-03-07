@@ -1,11 +1,14 @@
 
 import './App.css'
 import {  useState, useRef, useEffect } from 'react'
-import MonthPayments from './components/MonthPayments';
+
 
 import plusImage from './images/plus.png'
 import hamburguerImage from './images/hamburguer.png'
 import {motion} from 'framer-motion'
+
+import PaymentWindow from './components/PaymentWindow'
+import PaymentWindowModal from './components/PaymentWindowModal'
 
 
 
@@ -32,7 +35,9 @@ function App() {
     setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
   }, [count])
 
-  console.log(width)
+  const [openModal, setOpenModal] = useState(false);
+
+  console.log(openModal)
 
   return (
     
@@ -44,15 +49,16 @@ function App() {
         <motion.div ref={carousel} className="carousel__container" whileTap={{cursor: "grabbing"}}>
           <motion.div  className='carousel__newPaymentWindow' 
             drag='x'
-            dragConstraints={{right:0, left: -width-50}}  
+            dragConstraints={{right:0, left: -width-200}}  
           >
             {id.map((ids)=>(
-              <motion.div className='carousel__paymentWindow' key={ids}>
-                < MonthPayments />
+              <motion.div className='carousel__paymentWindow' key={ids} onClick={() => setOpenModal(true)}>
+                < PaymentWindow />
               </motion.div>
             ))}
           </motion.div>
         </motion.div> 
+        <PaymentWindowModal isOpen={openModal} setCloseModal={() => setOpenModal(false)}/> 
      
       
     </div>
