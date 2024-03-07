@@ -6,8 +6,8 @@ const MonthPayments = () => {
     const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className='kct_de_agulha'>
-      <div className='paymentWindow__button' onClick={() => setOpenModal(true)}>
+    <div >
+      <div  onClick={() => setOpenModal(true)}>
         <PaymentWindow />
       </div>
       <PaymentWindowModal isOpen={openModal} setCloseModal={() => setOpenModal(false)}/> 

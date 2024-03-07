@@ -10,6 +10,12 @@ body{
   height: 150vh;
 }
 
+.App{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
 
 .navbar__container{
   display: flex;
@@ -26,14 +32,22 @@ body{
   width: 40px;
 }
 
-.newPaymentWindow{
+.carousel__container{
   display: flex;
-  justify-content: space-around;
-  max-width: 80%;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  margin: 50px 0 0 0;
+  width: 400px;
+  overflow: hidden;
+  
+ 
 }
 
-.kct_de_agulha3{
+.carousel__newPaymentWindow{
+  display: flex;
+  padding: 0 0 0 3px;
+  
+}
+
+.carousel__paymentWindow{
   max-height: 100px;
+  padding: 10px;
 }

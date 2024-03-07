@@ -7,7 +7,7 @@ import heartImage from '../images/heart.png'
 const PaymentWindowModal = ({isOpen , setCloseModal}) => {
     if(isOpen){
         return (
-            <div className='kct_deagulha2'>
+            <div className="paymentWindowModal">
                 <div className="modal__background" onClick={setCloseModal}></div> 
                 <div className='modal__container'>   
                     <ul className='modal__lista'>
