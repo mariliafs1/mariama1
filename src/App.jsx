@@ -34,7 +34,7 @@ function App() {
       </nav>
       <div  className='newPaymentWindow'>
         {id.map((ids)=>(
-          <div key={ids}>
+          <div className='kct_de_agulha3' key={ids}>
             < MonthPayments />
           </div>
         ))}
