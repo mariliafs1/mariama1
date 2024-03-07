@@ -1,21 +1,46 @@
-import PaymentWindow from './components/PaymentWindow'
-import PaymentWindowModal from './components/PaymentWindowModal'
-import './App.css'
-import { useState } from 'react'
 
+import './App.css'
+import {  useState } from 'react'
+import MonthPayments from './components/MonthPayments';
+
+import plusImage from './images/plus.png'
+import hamburguerImage from './images/hamburguer.png'
 
 
 
 function App() {
 
-  const [openModal, setOpenModal] = useState(false);
-  
+
+  const [count, setCount] = useState(0);
+
+  const [id, setId] = useState([]);
+
+  console.log(id);
+
+  const handlePlus = (e) => {
+    e.preventDefault();
+    setCount(count +1);
+    const newId = [...id, count]
+    setId(newId);
+    
+  }
+
   return (
-    <div>
-      <div className='paymentWindow__button' onClick={() => setOpenModal(true)}>
-        <PaymentWindow />
-      </div>
-      <PaymentWindowModal isOpen={openModal} setCloseModal={() => setOpenModal(false)} />
+    
+    <div className='App'>
+      <nav className='navbar__container'>
+        <div className='navbar__button'><img src={hamburguerImage} alt="" /></div>
+        <div className='navbar__button' onClick={handlePlus}><img src={plusImage} alt="" /></div>
+      </nav>
+      <div  className='newPaymentWindow'>
+        {id.map((ids)=>(
+          <div key={ids}>
+            < MonthPayments />
+          </div>
+        ))}
+       </div> 
+     
+      
     </div>
     )
 }

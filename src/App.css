@@ -6,19 +6,31 @@
 
 body{
   background-color: var(--cor-de-fundo);
+  width: 100vw;
+  height: 150vh;
 }
 
-.paymentWindow__button{
-  max-width: 100px;
-  height: 100px;
-  border: 1px solid black;
-  border-radius: 12px;
+
+.navbar__container{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 1rem 2rem;
+  background: rgb(174, 174, 214);
+}
+
+.navbar__button{
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-.paymentWindow__button:hover{
-  border: blue;
+.navbar__container img{
+  width: 40px;
 }
 
-
+.newPaymentWindow{
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
