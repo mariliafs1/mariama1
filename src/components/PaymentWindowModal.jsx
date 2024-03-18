@@ -4,7 +4,9 @@ import checkImage from '../images/check.png'
 import plusImage from '../images/plus.png'
 import heartImage from '../images/heart.png'
 
-const PaymentWindowModal = ({isOpen , setCloseModal}) => {
+const PaymentWindowModal = ({isOpen , setCloseModal, setPaymentPago, setPaymentNaoPago}) => {
+    console.log(setPaymentPago);
+
     if(isOpen){
         return (
             <div className="paymentWindowModal">
@@ -12,7 +14,7 @@ const PaymentWindowModal = ({isOpen , setCloseModal}) => {
                 <div className='modal__container'>   
                     <ul className='modal__lista'>
                         <li className='modal__borda'>
-                            <button className='modal__button'>
+                            <button className='modal__button' onClick={setPaymentPago}>
                                 <p>Pago</p>
                                 <img src={checkImage} alt="" />
                             </button>

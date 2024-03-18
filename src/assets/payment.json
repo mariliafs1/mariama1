@@ -1,0 +1,38 @@
+[
+    {
+        "id":"1",
+        "date":"10 jan 2024",
+        "payment":"500",
+        "paymentState":"pago"
+    },
+    {
+        "id":"2",
+        "date":"21 jan 2024",
+        "payment":"1000",
+        "paymentState":"atraso"
+    },
+    {
+        "id":"3",
+        "date":"27 jan 2024",
+        "payment":"1800",
+        "paymentState":" "
+    },
+    {
+        "id":"3",
+        "date":"27 jan 2024",
+        "payment":"1800",
+        "paymentState":" "
+    },
+    {
+        "id":"3",
+        "date":"27 jan 2024",
+        "payment":"1800",
+        "paymentState":" "
+    },
+    {
+        "id":"3",
+        "date":"27 jan 2024",
+        "payment":"1800",
+        "paymentState":" "
+    }
+]
